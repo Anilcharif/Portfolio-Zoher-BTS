@@ -20,7 +20,7 @@ main section figure:nth-child(2n){
 }
 main section figure:nth-child(2n+1){
     /* background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); */
-    background-color: #00cfe8;
+    background-color: #5a2988;
 
 }
 
@@ -42,6 +42,9 @@ padding-bottom: 2rem;
 main section figure img{
     max-width: 40rem;
     height: auto;
+}
+main section h2{
+    text-align: center;
 }
 
 /* svg*/

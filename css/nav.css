@@ -162,15 +162,28 @@
     background: url("../asset/images_menu/accueil.gif") no-repeat center center;
     background-size: cover;
   }
-  header section:nth-child(2) h2, header section:nth-child(2) a{
-    margin-right: auto;
-    font-size: 6rem;
+  /* header section:nth-child(2) h2, header section:nth-child(2) a{
+  
+    
+  } */
+
+  .titre{
+    text-align: center;
     color: #fff;
+   
+    font-size: 2rem;
+    
   }
+  .titre h2{
+    margin-right: 110rem;
+  }
+  
   nav section h2{
     display: flex;
     text-align: left;
+    background-color: blueviolet;
   }
+
   
   
 
