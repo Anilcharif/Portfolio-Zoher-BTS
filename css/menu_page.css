@@ -46,6 +46,13 @@ main section figure img{
 main section h2{
     text-align: center;
 }
+footer{
+    text-align: center;
+    padding: 4rem;
+    color:#fffefe;
+    background-color: #000;
+    
+}
 
 /* svg*/
 
