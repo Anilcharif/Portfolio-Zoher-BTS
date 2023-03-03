@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mon menu web">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image" sizes="32x32" href="asset/code.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="icon" type= "image/ico" href="./favicon/site.webmanifest">  
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/competence.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <title>Portfolio</title>
+
+</head>
+<body>
+    <header >
+        <nav>
+            <a href = "index.html#parcours" aria-hidden="true" class = "nav_logo"><img src="./favicon/android-chrome-192x192.png" alt="" ></a>
+            <button type = "button" id = "afficher_btn">
+                <i class = "fas fa-bars"></i>
+            </button>
+
+            <section class="nav_overlay">
+                <div role="region" aria-label="menu" class = "nav-overlay-container">
+                    <button type = "button" id = "cacher_btn">
+                        <i class = "fas fa-close"></i>
+                    </button>
+                    <ul class = "nav-links">
+                        <li><a href = "index.html">home</a></li>
+                        <li><a href = "parcours.html">Parcours</a></li>
+                        <li><a href = "competence.html">Compétences</a></li>
+                        <li><a href = "projet.html">Projets</a></li>
+                        <li><a href = "veille.html">Veille</a></li>
+                    </ul>
+                    <ul class = "nav-icons">
+                        <li><a href = "https://fr.linkedin.com/in/zoher-charif"> <i class = "fab fa-linkedin-in"></i></a></li>
+                        <li><a href = "https://twitter.com/ZoherCharif"><i class = "fab fa-twitter"></i></a></li>
+                        <li><a href = "https://www.instagram.com/zohercharif/"><i class = "fab fa-instagram"></i></a></li>
+                        <li><a href = "https://github.com/Anilcharif"><i class = "fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+
+    <main class="competence">
+
+
+
+        <!-- <section>
+            <h2>Mes compétences</h2>
+            <ul>
+                <li><img src="asset/images_competence/html_comp.png" alt=""></li>
+                <li><img src="asset/images_competence/css_comp.png" alt=""></li>
+                <li><img src="asset/images_competence/js_comp.png" alt=""></li>
+                <li><img src="asset/images_competence/mysql_comp.png" alt=""></li>
+                <li><img src="asset/images_competence/php_comp.png" alt=""></li>
+            </ul>
+        </section> -->
+
+     
+            <section class="container">
+                <div class="text">
+                    <h2><span>Mes</span> Compétences</h2>
+                    <p>Mes experiences et Compétences </p>
+                </div>
+                
+                <div class="skill-card">
+                    <ul class="card">
+                        <li><i class="fas fa-pencil-ruler"></i></li>
+                        <li><h4>Architecture Web</h4></li>
+                        <li><p>HTML, CSS, PHP, JS</p></li>
+                    </ul>
+                    
+                    <ul class="card">
+                        <li><i class="fas fa-magic"></i></li>
+                        <li><h4>Design</h4></li>
+                        <li><p>Photoshop</p></li>
+                    </ul>
+
+                    
+                    <ul class="card">
+                        <li><i class="fab fa-bitbucket"></i></li>
+                        <li><h4>Architecture Logiciel</h4></li>
+                        <li><p>JAVA, SQL</p></li>
+                    </ul>
+
+
+                    <ul class="card">
+                        <li><i class="fas fa-eye"></i></li>
+                        <li><h4>Architecture Logiciel</h4></li>
+                        <li><p>JAVA, SQL</p></li>
+                    </ul>
+
+
+                    <ul class="card">
+                        <li><i class="fab fa-bitbucket"></i></li>
+                        <li><h4>Architecture Logiciel</h4></li>
+                        <li><p>JAVA, SQL</p></li>
+                    </ul>
+
+
+                    <ul class="card">
+                        <i class="fa-regular fa-hand-fist"></i>
+                        <li><h4>Architecture Logiciel</h4></li>
+                        <li><p>JAVA, SQL</p></li>
+                    </ul>
+
+
+                </div>
+                <a href="#">Plus de compétences</a>
+            </section>
+
+
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/competence.js"></script>
+</body>
+
+</html>
