@@ -1,0 +1,112 @@
+header h2{
+    font-size: 3.5rem;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #00cfe8;
+  }
+  header h2 span{
+    color: #1b1b1b;
+  }
+
+
+
+/* SECTION VEILLE */
+
+main .technique{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem ;
+  background-image: #ebebeb;
+  flex-direction: column;
+  margin: 4rem auto;
+  width: 70%;
+}
+main .technique h2, main .technique p{
+  color: #222;
+  font-size: 2rem;
+}
+main .technique h2{
+  margin-bottom: 2rem;
+}
+main .technique ul li a{
+  color: #222;
+  font-size: 1.5rem;
+}
+
+
+
+@media screen and (max-width: 70rem) {
+  main .technique{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+  
+
+
+
+
+/* MODAL */
+
+/* main .modal {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+  
+  main .modal figure {
+    width:80%;
+    height: 80vh;
+    display: flex;
+  }
+  
+  main .modal .img {
+    flex: 1;
+    height: 100%;
+    transform: skew(5deg);
+    cursor: pointer;
+    margin: 0 2px;
+    transition: all .3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #222;
+    position: relative;
+  }
+  main .modal .img1{background-image: url("../asset/images_competence/css_comp.png");}
+  main .modal .img2{background-image: url("../asset/images_competence/html_comp.png");}
+  main .modal .img3{background-image: url("../asset/images_competence/js_comp.png");}
+  main .modal .img4{background-image: url("../asset/images_competence/mysql_comp.png");}
+  main .modal .img5{background-image: url("../asset/images_competence/php_comp.png");}
+  
+  main .modal .img p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    transform: rotate(-90deg);
+    transform-origin: 0% 0%;
+    transition: all .3s;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+  }
+  
+  main .modal figure:hover img {
+    transform: skew(0);
+  }
+  
+  main .modal .img:hover {
+    flex: 5;
+  }
+  
+  main .modal .img:hover p {
+    background-color: transparent;
+    border: 2px solid #222;
+    color: #222;
+    transform: rotate(0deg);
+  } */

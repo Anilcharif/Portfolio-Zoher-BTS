@@ -14,6 +14,21 @@ main section figure{
     min-height: 60vh;
 }
 
+main section a {
+    text-transform: uppercase;
+    font-size: inherit;
+    color: #000;
+    background-color: #d4d9df;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    line-height: 2rem;
+    display: inline-block;
+    width: 30rem;
+    text-align: center;
+}
+
 main section figure:nth-child(2n){
     flex-direction: row-reverse;
     background-image: linear-gradient(to right, #434343 0%, black 100%);
@@ -32,9 +47,7 @@ main section figure figcaption{
     font-size: 2rem;
     max-width: 40%;
     color: #fff;
-}
-main section figure figcaption a{
-    color: #fff;
+
 }
 main section figure figcaption h2, main section figure figcaption p{
 padding-bottom: 2rem;
