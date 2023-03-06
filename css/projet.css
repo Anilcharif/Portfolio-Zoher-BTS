@@ -1,0 +1,124 @@
+/* body{
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+ main section .presentation_projet{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ccc;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    padding: 4rem 0;
+    border-radius: 2rem;
+}
+main section a{
+  color: #fff;
+}
+main section{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: #fff;
+  width: 40%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  padding: 2rem;
+  font-size: 2rem;
+}
+main section img{
+  max-width: 30rem;
+  padding: 2rem 0;
+}
+
+main section h2{
+    text-align: center;
+    padding: 4rem 0;
+}
+main ul li, main ul li a{
+  text-align: center;
+}
+
+@media screen and (max-width: 70rem) {
+    main section{
+        max-width: 90%;
+    }
+
+  
+}
+  */
+
+  @import url('https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap');
+
+ body{
+  background: #ebebeb;
+}
+main{
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  grid-gap: 4rem;
+  width: 80%;
+  padding: 2rem;
+}
+main section{
+  background-color: #1c1b29;
+  border-radius: 2rem;
+  box-shadow: 0 0 3rem rgba(0,0,0,0.18);
+}
+
+main img{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 2rem 2rem 0 0;
+}
+
+
+main .details{
+  padding: 2rem 1rem;
+}
+main .details h3{
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin: 1rem 0 1.5rem 0;
+}
+main .details p{
+  color: #a0a0a0;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: 400;
+}
+
+header h2{
+  font-size: 3.5rem;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #00cfe8;
+}
+header h2 span{
+  color: #1b1b1b;
+}
+
+@media screen and (max-width: 70rem) {
+  main{
+    grid-template-columns: repeat(1,1fr);
+  }
+  header h1{
+    font-size: 3rem;
+
+  }
+
+}
+  
