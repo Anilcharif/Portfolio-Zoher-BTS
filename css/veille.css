@@ -47,6 +47,7 @@ main .technique ul li a{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5%;
 
 }
 
