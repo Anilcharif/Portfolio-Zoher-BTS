@@ -1,131 +1,647 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mon menu web">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="icon" type= "image/ico" href="./favicon/site.webmanifest">  
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/menu_page.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoher Anil Charif – Portfolio</title>
+  <meta name="description" content="Portfolio de Zoher Anil Charif, développeur full-stack en Master 2 à INSTA, à la recherche d'une alternance en développement Web.">
 
+  <!-- Police Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Icônes de technos (Devicon) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-
-    <title>Portfolio</title>
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header >
-        <nav>
-            <a href = "#" aria-hidden="true" class = "nav_logo"><img src="./favicon/android-chrome-192x192.png" alt="" ></a>
-            <button type = "button" id = "afficher_btn">
-                <i class = "fas fa-bars"></i>
-            </button>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#hero" class="logo">
+        <span class="logo-mark">&lt;Z/&gt;</span>
+        <div class="logo-text">
+          <span class="logo-name">Zoher Anil Charif</span>
+          <span class="logo-subtitle">Développeur Full-Stack · Master 2 INSTA</span>
+        </div>
+      </a>
 
-            <section class="nav_overlay">
-                <div role="region" aria-label="menu" class = "nav-overlay-container">
-                    <button type = "button" id = "cacher_btn">
-                        <i class = "fas fa-close"></i>
-                    </button>
-                    <ul class = "nav-links">
-                        <li><a href = "index.html">home</a></li>
-                        <li><a href = "parcours.html">Parcours</a></li>
-                        <li><a href = "competence.html">Compétences</a></li>
-                        <li><a href = "projet.html">Projets</a></li>
-                        <li><a href = "veille.html">Veille</a></li>
-                    </ul>
-                    <ul class = "nav-icons">
-                        <li><a href = "https://fr.linkedin.com/in/zoher-charif"> <i class = "fab fa-linkedin-in"></i></a></li>
-                        <li><a href = "https://twitter.com/ZoherCharif"><i class = "fab fa-twitter"></i></a></li>
-                        <li><a href = "https://www.instagram.com/zohercharif/"><i class = "fab fa-instagram"></i></a></li>
-                        <li><a href = "https://github.com/Anilcharif"><i class = "fab fa-github"></i></a></li>
-                    </ul>
-                </div>
-            </section>
-        </nav>
+      <nav class="nav">
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+          ☰
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#experience">Parcours</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-        <section class="titre">
-            <h2  >Anil Charif Zoher</h2>
-        </section> 
-        
-<!--         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#00cfe8" fill-opacity="1" d="M0,224L80,213.3C160,203,320,181,480,192C640,203,800,245,960,250.7C1120,256,1280,224,1360,208L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-          </svg> -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+        🌓
+      </button>
+    </div>
+  </header>
 
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="hero-kicker">En recherche d'alternance</p>
+          <h1>
+            Développeur Full-Stack en
+            <span class="accent">Master 2 à INSTA</span>
+          </h1>
+          <p class="hero-subtitle">
+            Je construis des applis web complètes : backend (Laravel, Symfony, API REST)
+            et front moderne (React, interfaces propres), avec une vraie curiosité pour la data et le Machine Learning.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+            <!-- Mets ici le lien de ton CV PDF -->
+            <a href="asset/CV Zoher.pdf" class="btn btn-ghost" target="_blank" rel="noreferrer">Télécharger mon CV</a>
+          </div>
+          <div class="hero-tags">
+            <span class="tag">React</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">Symfony</span>
+            <span class="tag">API REST</span>
+            <span class="tag">Python & ML</span>
+            <span class="tag">Kubernetes</span>
+          </div>
+        </div>
 
-          
-    </header>
+        <aside class="hero-card reveal">
+          <div class="hero-card-inner">
+            <p class="hero-card-title">En deux phrases</p>
+            <p class="hero-card-text">
+              Je cherche une équipe où je peux apprendre, être utile rapidement
+              et prendre en main de vraies features (développement, corrections, refacto).
+            </p>
+            <ul class="hero-card-list">
+              <li><span>🎓</span> Master 2 – Conception & Dév. Web (INSTA)</li>
+              <li><span>🧩</span> Parcours : BTS SIO · Licence / Bachelor dev app</li>
+              <li><span>🛠️</span> Projets web, API, front moderne, ML académiques</li>
+              <li><span>📅</span> Alternance dès maintenant / à définir</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container section-header reveal">
+        <h2>À propos</h2>
+        <p>Pour situer un peu qui je suis et comment je travaille.</p>
+      </div>
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <p>
+            Je suis <strong>Zoher Anil Charif</strong>, développeur full-stack en
+            <strong>Master 2 à INSTA</strong>. J’ai commencé avec un
+            <strong>BTS SIO option SLAM</strong>, puis j’ai continué sur des formations orientées
+            développement d’applications web.
+          </p>
+          <p>
+            J’aime partir d’un besoin concret, réfléchir à la structure du projet,
+            modéliser les données, puis livrer une interface claire et agréable pour l’utilisateur.
+          </p>
+          <p>
+            En alternance, je veux progresser au contact de devs plus expérimentés tout en prenant
+            rapidement en charge des tâches concrètes : nouvelles fonctionnalités, évolutions,
+            corrections, petites améliorations continues.
+          </p>
+        </div>
+        <div class="about-details reveal">
+          <div class="about-item">
+            <span class="about-label">Localisation</span>
+            <span class="about-value">France / Madagascar (flexible)</span>
+          </div>
+          <div class="about-item">
+            <span class="about-label">Objectif</span>
+            <span class="about-value">Alternance en développement Web / Full-Stack</span>
+          </div>
+          <div class="about-item">
+            <span class="about-label">Points forts</span>
+            <span class="about-value">Persévérance, sérieux, envie de monter en niveau</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <main>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container section-header reveal">
+        <h2>Compétences</h2>
+        <p>Les technos que j’utilise vraiment en ce moment.</p>
+      </div>
+      <div class="container skills-grid">
+        <div class="skill-card reveal">
+          <h3><span class="skill-title-icon">💻</span> Front-End</h3>
+          <ul class="skills-list">
+            <li>
+              <i class="devicon-html5-plain colored skill-icon"></i>
+              <span>HTML5 / CSS3 (Flexbox, Grid)</span>
+            </li>
+            <li>
+              <i class="devicon-css3-plain colored skill-icon"></i>
+              <span>CSS3, animations simples</span>
+            </li>
+            <li>
+              <i class="devicon-javascript-plain colored skill-icon"></i>
+              <span>JavaScript ES6+</span>
+            </li>
+            <li>
+              <i class="devicon-react-original colored skill-icon"></i>
+              <span>React (composants, hooks)</span>
+            </li>
+            <li>
+              <i class="devicon-figma-plain colored skill-icon"></i>
+              <span>Intégration responsive & lisible</span>
+            </li>
+          </ul>
+        </div>
 
+        <div class="skill-card reveal">
+          <h3><span class="skill-title-icon">🛠️</span> Back-End</h3>
+          <ul class="skills-list">
+            <li>
+              <i class="devicon-php-plain colored skill-icon"></i>
+              <span>PHP moderne (Laravel, Symfony – projets académiques & perso)</span>
+            </li>
+            <li>
+              <i class="devicon-laravel-plain colored skill-icon"></i>
+              <span>Laravel (CRUD, Auth, API)</span>
+            </li>
+            <li>
+              <i class="devicon-symfony-original colored skill-icon"></i>
+              <span>Symfony (bases)</span>
+            </li>
+            <li>
+              <i class="devicon-nodejs-plain colored skill-icon"></i>
+              <span>Node.js (bases)</span>
+            </li>
+            <li>
+              <span class="skill-icon-text">API</span>
+              <span>Conception & implémentation d’API REST</span>
+            </li>
+          </ul>
+        </div>
 
-        <section>
-            <figure id="mon_cv">
-                <img src="asset/images_menu/cv.png" alt="cv">
-                <figcaption>
-                    <h2>Mon CV En Ligne</h2>
-                    <p>Un aperçu des mes compétences, de mes projets et de mes éxperiences professionelles</p>
-                    <a href="asset/CV Zoher.pdf" target="_blank">En savoir plus</a>
-                </figcaption>
-            </figure>
-            <figure id="parcours">
-                <img src="asset/images_menu/parcours.png" alt="parcours">
-                <figcaption>
-                    <h2>Mon Parcours</h2>
-                    <p> J’ai 22 ans, Bachelor à Webitech en <br> Concepteur développeur d'application </p>
-                    <a href="parcours.html">En savoir plus</a> <!-- parcours.html -->
-                </figcaption>
-            </figure>    
-            <figure id="compétences">
-                <img src="asset/images_menu/compétences.webp" alt="compétences">
-                <figcaption>
-                    <h2>Mes Compétences</h2>
-                    <p>Actuellement, j’ai acquis un certain nombre de compétences théoriques et pratiques dans différents domaines techniques. Mes projets m’ont permis de me perfectionner</p>
-                    <a href="competence.html">En savoir plus</a> <!-- competence.html -->
-                </figcaption>
-            </figure>
-            
-            <figure id="projets">
-                <img src="asset/images_menu/projets.png" alt="projets">
-                <figcaption>
-                    <h2>Mes Projets</h2>
-                    <p>J’ai eu l’occasion de faire de plusieurs projets en informatique à l'école, pour des stages en entreprise et également de façon personnelle. </p>
-                    <a href="projet.html">En savoir plus</a> <!-- projet.html -->
-                </figcaption>
-            </figure> 
-            <figure id="veille">
-                <img src="asset/images_menu/veille_techno.png" alt="veille techno">
-                <figcaption>
-                    <h2>Ma Veille</h2>
-                    <p>Une veille portant sur les technologies. </p>
-                    <a href="veille.html">En savoir plus</a> <!-- veille.html -->
-                </figcaption>
-            </figure>       
-        </section>
+        <div class="skill-card reveal">
+          <h3><span class="skill-title-icon">🗄️</span> Données & DevOps</h3>
+          <ul class="skills-list">
+            <li>
+              <i class="devicon-mysql-plain colored skill-icon"></i>
+              <span>MySQL / PostgreSQL</span>
+            </li>
+            <li>
+              <span class="skill-icon-text">DB</span>
+              <span>Modélisation de base (MCD / MLD)</span>
+            </li>
+            <li>
+              <i class="devicon-git-plain colored skill-icon"></i>
+              <span>Git / GitHub</span>
+            </li>
+            <li>
+              <i class="devicon-docker-plain colored skill-icon"></i>
+              <span>Docker (bases)</span>
+            </li>
+            <li>
+              <i class="devicon-kubernetes-plain colored skill-icon"></i>
+              <span>Kubernetes (TP & labos)</span>
+            </li>
+          </ul>
+        </div>
 
-    </main>
+        <div class="skill-card reveal">
+          <h3><span class="skill-title-icon">🤖</span> Data & Machine Learning</h3>
+          <ul class="skills-list">
+            <li>
+              <i class="devicon-python-plain colored skill-icon"></i>
+              <span>Python (NumPy, Pandas, Matplotlib)</span>
+            </li>
+            <li>
+              <i class="devicon-tensorflow-original colored skill-icon"></i>
+              <span>TensorFlow / scikit-learn (projets académiques)</span>
+            </li>
+            <li>
+              <span class="skill-icon-text">ML</span>
+              <span>Classification, CNN simples</span>
+            </li>
+            <li>
+              <span class="skill-icon-text">IA</span>
+              <span>Intérêt fort pour l’IA appliquée</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container section-header reveal">
+        <h2>Projets</h2>
+        <p>Un aperçu visuel de quelques projets réalisés (perso, scolaires, en groupe).</p>
+      </div>
+      <div class="container projects-grid">
 
-    <script src="js/app.js"></script>
+        <!-- Animation perso -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/animation.perso/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/Animation.PNG" alt="Animation personnelle" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Animation personnelle</h3>
+            <p>
+              Animation front réalisée pour travailler les transitions, le timing
+              et la fluidité des éléments, sans surcharger l’interface.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Animation</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/animation.perso/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Calculatrice -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/Calculatrice/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/calculatrice.PNG" alt="Calculatrice" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Calculatrice</h3>
+            <p>
+              Calculatrice web pour travailler la logique JavaScript, la gestion des événements
+              et l’ergonomie d’un composant utilisé tous les jours.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/Calculatrice/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lion -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/Lion/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/Lion.PNG" alt="Lion projet perso" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Lion – projet perso</h3>
+            <p>
+              Page autour d’un lion, utilisée pour tester la composition visuelle,
+              l’alignement et le travail sur les images en CSS.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/Lion/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Display CSS -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/diplay_css/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/Css.jpg" alt="Display CSS" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Display CSS</h3>
+            <p>
+              Petit projet pour manipuler les propriétés d’affichage (flex, inline-block, etc.)
+              et voir leur impact sur une mise en page concrète.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/diplay_css/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Java projet perso -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://github.com/lucas93220/personnel/tree/master/Personnel/docs" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/Java.jpg" alt="Projet Java personnel" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Projet Java (perso)</h3>
+            <p>
+              Projet Java réalisé en collaboration, avec gestion de la logique côté backend
+              et réflexion sur la structure du code.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Java</span>
+              <span class="tag">POO</span>
+              <span class="tag">Git</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/lucas93220/personnel/tree/master/Personnel/docs" target="_blank" rel="noreferrer">Voir le code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- M2L / Intranet -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/ProjetM2L/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/intranet.PNG" alt="Intranet M2L" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Intranet M2L</h3>
+            <p>
+              Site pour la Maison des Ligues : structure des pages, contenus, maquette
+              et intégration pour un intranet simplifié.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Maquettage</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/ProjetM2L/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- BATMAN / Gotham -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/gotham/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/batman.png" alt="Batman / Gotham" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Batman / Gotham</h3>
+            <p>
+              Univers de Gotham avec travail sur l’ambiance graphique, la typographie
+              et une mise en page immersive.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/gotham/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Gmail -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://github.com/Anilcharif/Gmail" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/gmail.PNG" alt="Gmail clone" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Gmail (maquette)</h3>
+            <p>
+              Maquette inspirée de Gmail pour travailler la structure d’une application mail,
+              avec plusieurs blocs réutilisables.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Anilcharif/Gmail" target="_blank" rel="noreferrer">Voir le code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Achat de PC -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/Achat-de-PC/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/achat pc.png" alt="Achat de PC" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Achat de PC</h3>
+            <p>
+              Page autour de l’achat d’un PC, avec mise en avant de cartes produits
+              et travail sur l’ergonomie d’un mini-parcours utilisateur.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/Achat-de-PC/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Clean CSS -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/clean/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/clean.PNG" alt="Clean CSS" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Clean CSS</h3>
+            <p>
+              Projet centré sur un design minimaliste et “clean”, avec un focus sur l’espacement,
+              la hiérarchie visuelle et la cohérence typographique.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">UI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/clean/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Animation engrenage Java -->
+        <article class="project-card reveal">
+          <div class="project-thumb">
+            <a href="https://anilcharif.github.io/Java-animation-projet-web/" target="_blank" rel="noreferrer">
+              <img src="asset/images_projet/engrenage.PNG" alt="Animation engrenage" loading="lazy">
+            </a>
+          </div>
+          <div class="project-content">
+            <h3>Animation engrenage</h3>
+            <p>
+              Projet d’animation avec engrenages, pour lier visuel et logique
+              et s’entraîner sur des animations plus techniques.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Animation</span>
+            </div>
+            <div class="project-links">
+              <a href="https://anilcharif.github.io/Java-animation-projet-web/" target="_blank" rel="noreferrer">Voir la démo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container section-header reveal">
+        <h2>Parcours</h2>
+        <p>Études et expériences principales.</p>
+      </div>
+      <div class="container timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Master 2 – Conception & Développement Web</h3>
+            <p class="timeline-meta">INSTA · 2024 – 2026</p>
+            <p>
+              Approfondissement du développement web, des architectures, des projets full-stack
+              et montée en compétences sur des sujets comme Kubernetes et l’IA.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Bachelor / Licence en développement d’applications</h3>
+            <p class="timeline-meta">2023 – 2024</p>
+            <p>
+              POO, conception d’applications, frameworks PHP, projets web encadrés
+              et travail en groupe.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>BTS SIO option SLAM</h3>
+            <p class="timeline-meta">2021 – 2023</p>
+            <p>
+              Premiers projets concrets : sites web, bases de données,
+              mini-applications de gestion. Base solide pour la suite.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Expériences professionnelles</h3>
+            <p class="timeline-meta">En parallèle des études</p>
+            <p>
+              Job étudiant, gestion du temps, contact client, sens des responsabilités.
+              Ça m’aide aujourd’hui à être régulier sur mes projets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container section-header reveal">
+        <h2>Contact</h2>
+        <p>Pour parler d’un besoin, d’un projet ou d’une alternance.</p>
+      </div>
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p>
+            Si mon profil correspond à ce que vous cherchez, je suis disponible pour un échange
+            (visio ou sur place) afin de parler de vos projets et de votre stack.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <strong>Email :</strong>
+              <!-- Mets ici ton vrai email visible -->
+              <a href="mailto:prenom.nom@exemple.com">prenom.nom@exemple.com</a>
+            </li>
+            <li>
+              <strong>GitHub :</strong>
+              <a href="https://github.com/Anilcharif" target="_blank" rel="noreferrer">
+                github.com/Anilcharif
+              </a>
+            </li>
+            <!-- Tu peux ajouter LinkedIn ici -->
+          </ul>
+        </div>
+
+        <!-- Formulaire Formspree -->
+        <form
+          class="contact-form reveal"
+          action="https://formspree.io/f/meowpbve"
+          method="POST"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom / Prénom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <!-- Formspree utilise de préférence "email" -->
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Parlez-moi un peu de votre besoin..." required></textarea>
+          </div>
+
+          <!-- Sujet du mail côté Formspree -->
+          <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio de Zoher">
+
+          <!-- Anti-spam honeypot (champ caché, ne pas remplir) -->
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- Optionnel : redirection après envoi (à configurer ou commenté) -->
+          <!-- <input type="hidden" name="_next" value="https://ton-site.fr/merci.html"> -->
+
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <p class="form-note">
+            Ce formulaire est envoyé via Formspree et arrive directement dans ma boîte mail.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> · Zoher Anil Charif · Portfolio</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
-
-<footer>
-    <p>&copy; - Anil charif Zoher - 
-</footer>
-
-
-
-
-
-
-
